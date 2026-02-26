@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Table</title>
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 2px solid black;
+        border-collapse: separate;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Assignment 2 - Table
+      </caption>
+      <thead>
+        <tr>
+          <td>Item</td>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Price</th>
+          <!-- <td><b>Quantity</b></td>
+          <td><b>Unit Price</b></td>
+          <td><b>Price</b></td> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pencils</td>
+          <td>2</td>
+          <td>$1</td>
+          <td>$2</td>
+        </tr>
+        <tr>
+          <td>Erasers</td>
+          <td>4</td>
+          <td rowspan="2">$0.50</td>
+          <td>$2</td>
+        </tr>
+        <tr>
+          <td colspan="2">Subtotal</td>
+          <td>$4</td>
+        </tr>
+        <tr>
+          <td>Tax</td>
+          <td>10%</td>
+          <td colspan="2">$0.4</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Footer of the table</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="submit.html" method="get">
+      <fieldset>
+        <legend>Form</legend>
+        <div>
+          <fieldset>
+            <legend>Personal Information Section</legend>
+            <div>
+              <label for="name">Full name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Firstname_Lastname"
+                required
+              />
+            </div>
+            <br />
+            <div>
+              <label for="about">About Yourself</label>
+              <textarea
+                name="about"
+                id="abt_yourself"
+                cols="50"
+                rows="5"
+                placeholder="Write about yourself"
+              ></textarea>
+            </div>
+            <br />
+            <div>
+              <label for="email">Email Address</label>
+              <input type="email" name="mail" id="mail" required />
+            </div>
+            <br />
+            <div>
+              <label for="pass">Password </label>
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                minlength="8"
+                required
+              />
+            </div>
+            <br />
+            <div>
+              <label for="phoneno">Phone Number</label>
+              <input
+                type="tel"
+                name="phoneno"
+                id="phoneno"
+                minlength="10"
+                maxlength="10"
+                pattern="[0-9]{10}"
+              />
+            </div>
+            <br />
+            <div>
+              <label for="web">Website</label>
+              <input type="url" name="web" id="web" />
+            </div>
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Skills &amp; Preferences</legend>
+            <div>
+              <label for="skills">Skills : </label>
+              <input
+                type="checkbox"
+                name="skills"
+                id="html"
+                value="HTML"
+                checked
+              />
+              <label for="html">HTML</label>
+              <input type="checkbox" name="skills" id="css" value="CSS" />
+              <label for="css">CSS</label>
+              <input type="checkbox" name="skills" id="js" value="JavaScript" />
+              <label for="js">JavaScript</label>
+            </div>
+            <br />
+            <div>
+              <label for="gender">Gender : </label>
+              <input type="radio" name="gender" id="male" value="male" />
+              <label for="male">Male</label>
+
+              <input type="radio" name="gender" id="female" value="female" />
+              <label for="female">Female</label>
+            </div>
+            <br />
+            <div>
+              <label for="color">Preferred Color</label>
+              <input type="color" name="color" id="color" value="#FAC898" />
+            </div>
+            <br />
+            <div>
+              <label for="explev">Experience Level</label>
+              <input
+                type="range"
+                name="explev"
+                id="explev"
+                min="0"
+                max="10"
+                step="2"
+                value="4"
+                oninput="this.nextElementSibling.value = this.value"
+              />
+              <output for="explev">4</output>
+            </div>
+            <br />
+            <div>
+              <label for="search">Search</label>
+              <input type="search" name="search" id="search" />
+            </div>
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Date And Time Inputs</legend>
+            <div>
+              <label for="dob">Date of Birth</label>
+              <input type="date" name="dob" id="dob" max="2005-12-31" />
+            </div>
+            <br />
+            <div>
+              <label for="time">Available Time</label>
+              <input type="time" name="time" id="time" min="9" max="18" />
+            </div>
+            <br />
+            <div>
+              <label for="joinmon">Joining Month</label>
+              <select name="joinmon" id="joinmon">
+                <option value="jan" selected>January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+                <option value="apr">April</option>
+                <option value="may">May</option>
+                <option value="jun">June</option>
+                <option value="jul">July</option>
+                <option value="aug">August</option>
+                <option value="sep">September</option>
+                <option value="oct">October</option>
+                <option value="nov">November</option>
+                <option value="dec">December</option>
+              </select>
+              <label for="joiningDate">Joining Date:</label>
+              <input
+                type="date"
+                id="joiningDate"
+                name="joiningDate"
+                value="2026-01-09"
+              />
+            </div>
+            <br />
+            <div>
+              <label for="week">Training Week</label>
+              <input
+                type="week"
+                id="week"
+                name="week"
+                value="week 7"
+                readonly
+              />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Selection and Upload</legend>
+            <div>
+              <label for="skills">Technology : </label>
+              <input type="checkbox" name="skills" id="dotnet" value=".Net" />
+              <label for="dotnet">.Net</label>
+              <input
+                type="checkbox"
+                name="skills"
+                id="angular"
+                value="Angular"
+              />
+              <label for="angular">Angular</label>
+              <input type="checkbox" name="skills" id="java" value="Java" />
+              <label for="java">Java</label>
+              <input
+                type="checkbox"
+                name="skills"
+                id="reactjs"
+                value="ReactJS"
+              />
+              <label for="reactjs">ReactJS</label>
+              <input type="checkbox" name="skills" id="qa" value="QA" />
+              <label for="reactjs">QA</label>
+            </div>
+            <br />
+            <div>
+              <label for="resume">Upload Your Resume</label>
+              <input type="file" name="resume" id="resume" accept=".pdf" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Hidden Field</legend>
+            <input type="hidden" name="userID" value="12345" />
+          </fieldset>
+          Buttons
+          <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button">Button</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
