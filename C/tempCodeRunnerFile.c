@@ -1,1 +1,0 @@
-    printf("Smart Lock System\n");
