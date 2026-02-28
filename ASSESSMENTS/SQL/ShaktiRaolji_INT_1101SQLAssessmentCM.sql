@@ -78,7 +78,7 @@ JOIN Enrollments e
 ON s.StudentID = e. StudentID
 JOIN Courses c
 ON c.CourseID = e.CourseID
-WHERE CourseName = 'Full Stack'
+WHERE c.CourseName = 'Full Stack'
 
 --4. Show all Specializations that currently have no students assigned.
 SELECT sp.SpecializationName AS 'Specializations that currently have no students assigned'
@@ -110,17 +110,15 @@ JOIN Enrollments e
 ON e.StudentID = s.StudentID
 JOIN Courses c
 ON e.CourseID = c.CourseID
-GROUP BY (s.FirstName)
-HAVING Count(c.CourseID) > 3
+GROUP BY s.StudentID, s.FirstName, s.LastName
+HAVING COUNT(e.CourseID) >= 3
 
 --8. Calculate the total number of credits assigned to Student ID 1. 
 SELECT SUM(c.Credits) AS 'Total number of credits assigned to Student ID 1'
-FROM Courses c
-JOIN Enrollments e
+FROM Enrollments e
+JOIN Courses c
 ON e.CourseID = c.CourseID
-JOIN Students s
-ON s.StudentID = e.StudentID
-WHERE s.StudentID = 1
+WHERE e.StudentID = 1;
 
 --9. Select all students whose age is between 18 and 22 (inclusive). 
 SELECT (s.FirstName + ' ' + s.LastName) AS 'Students whose age is between 18 and 22'
@@ -128,10 +126,10 @@ FROM Students s
 WHERE s.Age  between 18 AND 22
 
 --10. Find the names of students who have enrolled in the course named 'Data 
-SELECT (s.FirstName + ' ' + s.LastName) AS 'Students who enrolled in the course named Data'
+SELECT (s.FirstName + ' ' + s.LastName) AS 'Students who enrolled in the course named Data Analytics'
 FROM Students s
 JOIN Enrollments e
 ON s.StudentID = e. StudentID
 JOIN Courses c
 ON c.CourseID = e.CourseID
-WHERE CourseName = 'Data'
+WHERE CourseName = 'Data Analytics'
