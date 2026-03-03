@@ -1,0 +1,54 @@
+* {
+  background-image: url('./background.jpg');
+}
+
+@font-face {
+  font-family: 'Myfont';
+  src: url('RISE/HTML/Assignment 8/Montserrat,Nunito,Oswald/Oswald.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#font-ch {
+  font-family: 'Myfont', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#text-decor {
+  color: red;
+  letter-spacing: 10px;
+  text-decoration: overline green;
+  text-shadow: 2px 2px 8px green;
+  padding: 10px;
+}
+
+.class1 {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  overflow: visible;
+}
+
+.class2 {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.class3 {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  overflow: scroll;
+}
+
+.class3 {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  overflow: auto;
+}
