@@ -1,0 +1,3 @@
+CREATE DATABASE AdvanceSQL
+
+USE AdvanceSQL
