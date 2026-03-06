@@ -1,0 +1,90 @@
+.background {
+  background-image: url('./image/background.jpg');
+  background-size: cover;
+}
+
+.box1 {
+  border: 1px solid black;
+  width: 150px;
+  height: 100px;
+  background-color: darkorchid;
+  position: absolute;
+  top: 10px;
+  left: 800px;
+  transform: skew(30deg);
+  font-size: larger;
+}
+
+.box2 {
+  border: 1px solid black;
+  width: 80px;
+  height: 130px;
+  background-color: lightpink;
+  position: absolute;
+  top: 200px;
+  left: 900px;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+
+.box3 {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  background-color: lightgoldenrodyellow;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+.box3:hover {
+  width: 150px;
+  background-color: royalblue;
+}
+
+.box4 {
+  border: 1px solid black;
+  width: 80px;
+  height: 200px;
+  background-color: brown;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.box5 {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  position: relative;
+  top: 10px;
+  left: 150px;
+}
+
+.box6 {
+  border: 1px solid black;
+  width: 90px;
+  height: 90px;
+  background-color: lightseagreen;
+  position: absolute;
+  top: 230px;
+  left: 910px;
+  z-index: 1;
+}
+
+.box6:hover {
+  z-index: 3;
+  background-color: royalblue;
+}
+
+.box7 {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: lightseagreen;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
