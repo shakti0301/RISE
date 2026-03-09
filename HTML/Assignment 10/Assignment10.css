@@ -1,0 +1,34 @@
+.task-1 {
+  font-size: 25px;
+}
+
+.task-1::first-letter {
+  font-size: 40px;
+  font-weight: bold;
+  color: blue;
+}
+
+.task-2 {
+  font-size: 25px;
+}
+
+.task-2::first-line {
+  font-size: 40px;
+  font-weight: bold;
+  background-color: yellow;
+}
+
+.important-message {
+  font-size: 25px;
+}
+
+.important-message::before {
+  font-size: 40px;
+  content: 'NOTE: ';
+  font-weight: bold;
+  color: red;
+}
+
+.copyright-para::after {
+  content: '© 2026';
+}
