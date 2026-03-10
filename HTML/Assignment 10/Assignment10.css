@@ -32,3 +32,32 @@
 .copyright-para::after {
   content: '© 2026';
 }
+
+.task-5 ol li:first-child {
+  color: red;
+}
+
+.task-5 ol li:nth-child(2) {
+  font-weight: bold;
+}
+
+.task-5 ol li:last-child {
+  color: blue;
+}
+
+.task-6 ol li:nth-child(odd) {
+  background-color: lightgray;
+}
+.task-6 ol li:nth-child(even) {
+  background-color: rgb(160, 159, 159);
+}
+
+#git {
+  font-size: 25px;
+  color: red;
+}
+
+#Linkedin {
+  font-size: 25px;
+  font-weight: bold;
+}
