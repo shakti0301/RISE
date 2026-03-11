@@ -52,12 +52,60 @@
   background-color: rgb(160, 159, 159);
 }
 
-#git {
-  font-size: 25px;
+.link {
   color: red;
 }
 
-#Linkedin {
-  font-size: 25px;
+a[href^='https://'] {
+  font-weight: bold;
+}
+
+.link:hover {
+  color: blue;
+}
+/* Apply a border to images that use a specific image file format. */
+img[src$='.jpg'] {
+  border: 2px solid green;
+  margin: 10px;
+  width: 300px;
+  height: auto;
+  outline: 3px solid red;
+  outline-offset: 3px;
+}
+
+input[placeholder*='Enter your email'] {
+  background-color: lightyellow;
+  border: 1px solid black;
+}
+
+/* Style all paragraphs that are located anywhere inside that container. */
+.task-10 p {
+  font-size: 18px;
+  color: darkblue;
+}
+
+.task-11 > p {
+  font-size: 18px;
+  background-color: rgb(224, 194, 182);
+  color: black;
+}
+
+h2 + p {
+  color: green;
+}
+
+h2 ~ p {
+  font-style: italic;
+  background-color: lightgray;
+}
+
+.task-14 > input:focus {
+  border-color: blue;
+  outline: none;
+  background-color: lightblue;
+}
+
+.task-15 input[type='checkbox']:checked + label {
+  color: red;
   font-weight: bold;
 }
