@@ -6,6 +6,7 @@ namespace FirstCSharpApp
     {
         static void Main()
         {
+            Console.WriteLine("Hello World!");
             Console.WriteLine("Hello Shaktisinh!");
             Console.WriteLine("My first C# program");
         }
