@@ -1,5 +1,5 @@
 * {
-  background-color: rgb(205, 238, 248);
+  background-color: rgb(223, 248, 255);
 }
 
 header .logo {
@@ -53,4 +53,34 @@ main {
 
 .featured-article h2 {
   background-color: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(5, 104, 132);
+}
+
+.navbar .logo {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: inherit;
+}
+
+.navbar .menu_items {
+  display: flex;
+  gap: 20px;
+  background-color: inherit;
+}
+
+.navbar .menu_items a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 8px 12px;
+  background-color: inherit;
 }
