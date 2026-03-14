@@ -61,6 +61,7 @@ main {
   align-items: center;
   padding: 10px 20px;
   background-color: rgb(5, 104, 132);
+  border-radius: 15px;
 }
 
 .navbar .logo {
@@ -82,5 +83,53 @@ main {
   color: #ffffff;
   font-size: 18px;
   padding: 8px 12px;
+  background-color: inherit;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.container div {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  display: flex;
+  background-color: rgb(1, 44, 56);
+  color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .footer-info {
+  padding: 10px 20px;
+  font-size: 19px;
+  text-align: center;
+  background-color: inherit;
+}
+
+.footer-info p {
+  background-color: inherit;
+}
+
+.footer .footer-links {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: inherit;
+}
+
+.footer .footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 17px;
   background-color: inherit;
 }
