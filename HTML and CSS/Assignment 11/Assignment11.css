@@ -133,3 +133,33 @@ main {
   font-size: 17px;
   background-color: inherit;
 }
+
+.media-demo {
+  padding: 20px;
+  height: auto;
+  width: 300px;
+  background-color: #94d6ee;
+  border-radius: 8px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.media-demo p {
+  background-color: inherit;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .media-demo {
+    background-color: aquamarine;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
