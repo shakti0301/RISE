@@ -1,3 +1,5 @@
+//'use strict';
+
 // console.log('Hello, World! This is a simple JavaScript file.');
 
 // let firstname = 'suresh';
@@ -94,3 +96,72 @@
 // } else {
 //   console.log('save More');
 // }
+
+//Strict equakity == VS ===
+
+// let money = '100';
+
+// if (money == 100) {
+//   console.log('Message print successfilly');
+// }
+
+// if (money === 100) {
+//   console.log('This msg is for strict equality check');
+// }
+
+//=== will check data type also
+
+// Ternary Operator :->.    ?(if) : (else)
+
+// const score = 70;
+
+// const result = score > 70 ? 'Great Job' : 'Need inprovement';
+
+// console.log(result);
+
+// let result1;
+// if (score > 70) {
+//   result1 = 'Great Job';
+// } else {
+//   result1 = 'Need Improvement';
+// }
+
+//Logical Operator &&, ||, !
+
+// const givenProgrammingAssess = true;
+// const givenDBAssess = true;
+
+// console.log(givenDBAssess && givenProgrammingAssess); //AND
+// console.log(givenDBAssess || givenProgrammingAssess); //OR
+// console.log(!givenDBAssess); //NOT
+
+// Here we can passed it in if else
+
+// Functions - Reusability
+// function greetings() {
+//   console.log('Good Morning');
+// }
+
+// greetings();
+
+// function greetings(firstName = 'there', lastName) {
+//   //here 'there' is a default parameter
+//   //Variable inside a function
+//   console.log('Hello ' + firstName + lastName);
+// }
+
+// greetings('shakti', 'raolji'); //value you passed
+
+// function add(a, b) {
+//   return a + b;
+// }
+
+// let sum = add(2, 2);
+// console.log(sum);
+
+const greet = function () {
+  console.log('Hello World');
+};
+
+console.log(greet);
+greet();
