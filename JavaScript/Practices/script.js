@@ -231,12 +231,32 @@
 //   res++; //inc
 // }
 
-//Object
-const person = {
-  firstName: 'Shakti',
-  lastName: 'Raolji',
-  age: 20,
-  hobbies: ['cricket', 'basketball'],
-};
+// //Object
+// const person1 = {
+//   firstName: 'Shakti',
+//   lastName: 'Raolji',
+//   age: 20,
+//   hobbies: ['cricket', 'basketball'],
+// };
 
-console.log(person);
+// const person2 = {
+//   a: 10,
+//   b: 20,
+// };
+
+// // const person3 = { ...person1, ...person2 }; //Spread
+// // console.log(person3);
+
+// //Rest
+// // const person3 = person1;   //It can change the base object value (person 1)
+// const person3 = { ...person1 }; // it doesnt change the base object value (perosn 2)
+// // person3.age = 30;
+// // console.log(person1);
+
+// let a = 20;
+// a = 30;
+
+// const b = [1, 2, 3];
+
+// b.push(23);
+// console.log(b);
