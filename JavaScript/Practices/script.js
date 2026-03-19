@@ -159,9 +159,84 @@
 // let sum = add(2, 2);
 // console.log(sum);
 
-const greet = function () {
-  console.log('Hello World');
+// const greet = function () {
+//   console.log('Hello World');
+// };
+
+// console.log(greet);
+// greet();
+
+//Function calling another function
+//calculate total orice with tax
+
+// function calculateTax(amount) {
+//   return amount * 0.18; // 18% tax
+// }
+
+// function calculateTotal(amount) {
+//   let tax = calculateTax(amount); //calling another function
+//   let total = amount + tax;
+//   return total;
+// }
+
+// let finalAmount = calculateTotal(100);
+// console.log(finalAmount);
+
+//Arrow Function == When you want to skip return keyword and curley bracies
+
+// const add = (a, b) => {
+//   return a + b;
+// };
+
+//we can use it without curley brecies
+
+// const greet = (name) => {
+//   console.log('Hello ' + name);
+//   console.log('Helloooooo' + name);
+// };
+
+// greet('Shakti');
+
+// const person = {
+//   name: 'Suresh',
+//   age: 20,
+//   greet: () => {
+//     console.log(this.name);
+//   },
+// };
+
+// person.greet();
+
+// //this keyword is not used in aerrow function
+
+// const persons = ['Suresh', 'Mahesh', 'Jayesh', 'Ramesh', 20];
+// //its start with zero because of (n-1) e.g. days Thu 0 , Fri 1 left
+// console.log(persons[5]);
+// console.log(persons.length); //to get length
+// persons.push('40'); // to add
+// persons.splice(0, 0, 'Naresh'); //index, deletedCount, insertedValue
+// console.log(persons);
+
+//loops
+
+// for (let res = 1; res <= 5; res++) {
+//   //Initialize, check, increment
+//   console.log('Congratulations ' + res);
+// }
+
+// let res = 1; //initialize
+// while (res <= 5) {
+//   // Check
+//   console.log('Congratulations ' + res);
+//   res++; //inc
+// }
+
+//Object
+const person = {
+  firstName: 'Shakti',
+  lastName: 'Raolji',
+  age: 20,
+  hobbies: ['cricket', 'basketball'],
 };
 
-console.log(greet);
-greet();
+console.log(person);
