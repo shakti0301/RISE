@@ -238,16 +238,22 @@
 //   age: 20,
 //   hobbies: ['cricket', 'basketball'],
 // };
+// const person2 = {
+//   firstName: 'Kushal',
+//   lastName: 'Raolji',
+//   age: 20,
+//   hobbies: ['cricket', 'basketball'],
+// };
 
 // const person2 = {
 //   a: 10,
 //   b: 20,
 // };
 
-// // const person3 = { ...person1, ...person2 }; //Spread
-// // console.log(person3);
+// const person3 = { ...person1, ...person2 }; //Spread
 
-// //Rest
+// console.log(person3);
+
 // // const person3 = person1;   //It can change the base object value (person 1)
 // const person3 = { ...person1 }; // it doesnt change the base object value (perosn 2)
 // // person3.age = 30;
@@ -260,3 +266,36 @@
 
 // b.push(23);
 // console.log(b);
+
+// Rest
+// const arr = [1, 2, 3, 4, 5];
+// const [first, ...rest] = arr;
+// console.log(rest);
+
+// const arr = [1, 2, 3, 4, 5];
+// const [first, ...rest] = arr;
+// console.log(first + 1); //here it dosent get 2 from the array, it add both value 1 (first ) + 1
+
+//MAP, REDUCE, FILTER
+
+//Map - To modify
+//Filter - To filter output
+//Reduce - Generate single output
+
+// const arr = [1, 2, 3, 4];
+// const mappedValue = arr.map((num) => num + 5);
+// console.log(mappedValue);
+
+// const filterValue = arr.filter((num) => num > 2);
+// console.log(filterValue);
+
+// const result = arr.reduce((num, res) => num + res, 0); //0 is the initial number
+// console.log(result);
+
+// const arr = [1, 2, 3, 4];
+// arr.shift();
+// arr.unshift(5, 6);
+
+// console.log(arr);
+
+//Promise, Async/Await, Error Handling
