@@ -4,28 +4,9 @@ namespace JumpStatements
 {
     class Program
     {
-        static void Main()
-        {
-            Console.WriteLine("----- BREAK Example -----");
-            BreakExample();
 
-            Console.WriteLine("\n----- CONTINUE Example -----");
-            ContinueExample();
-
-            Console.WriteLine("\n----- RETURN Example -----");
-            int result = Square(5);
-            Console.WriteLine("Square of 5 = " + result);
-
-            Console.WriteLine("\n----- GOTO Example -----");
-            GotoExample();
-
-            Console.WriteLine("\n----- REF RETURN Example -----");
-            RefReturnExample();
-        }
-
-        // -------------------------------
         // BREAK Example
-        // -------------------------------
+
         static void BreakExample()
         {
             // break stops the loop immediately
@@ -41,9 +22,9 @@ namespace JumpStatements
             }
         }
 
-        // -------------------------------
+
         // CONTINUE Example
-        // -------------------------------
+
         static void ContinueExample()
         {
             // continue skips the current iteration
@@ -59,18 +40,18 @@ namespace JumpStatements
             }
         }
 
-        // -------------------------------
+
         // RETURN Example
-        // -------------------------------
+
         static int Square(int number)
         {
             // return ends the method and sends value back
             return number * number;
         }
 
-        // -------------------------------
+
         // GOTO Example
-        // -------------------------------
+
         static void GotoExample()
         {
             int i = 0;
@@ -91,9 +72,9 @@ namespace JumpStatements
             Console.WriteLine("Exited loop using goto");
         }
 
-        // -------------------------------
+
         // REF RETURN Example
-        // -------------------------------
+
         static void RefReturnExample()
         {
             int[] numbers = { 10, 20, 30, 40 };
@@ -123,6 +104,25 @@ namespace JumpStatements
             }
 
             throw new Exception("Value not found");
+        }
+        
+        static void Main()
+        {
+            Console.WriteLine("----- BREAK Example -----");
+            BreakExample();
+
+            Console.WriteLine("\n----- CONTINUE Example -----");
+            ContinueExample();
+
+            Console.WriteLine("\n----- RETURN Example -----");
+            int result = Square(5);
+            Console.WriteLine("Square of 5 = " + result);
+
+            Console.WriteLine("\n----- GOTO Example -----");
+            GotoExample();
+
+            Console.WriteLine("\n----- REF RETURN Example -----");
+            RefReturnExample();
         }
     }
 
