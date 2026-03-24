@@ -1,27 +1,144 @@
-// const fetchData = new Promise((resolve, reject) => {
-//   //   let success = true;
-//   let success = Math.random() > 0.5;
+// ============================================================
+// PROMISES - Handle asynchronous operations
+// ============================================================
 
-//   setTimeout(() => {
-//     if (success) {
-//       resolve('Data fatched successfully');
-//     } else {
-//       reject('Error while fetching data');
-//     }
-//   }, 5000);
-// });
+// Promise represents an eventual completion/failure of async operation
+// States: Pending → Fulfilled (resolve) or Rejected (reject)
 
-// fetchData.then((res) => console.log(res)).catch((err) => console.log(err));
+// ============================================================
+// PROMISE BASICS
+// ============================================================
+
+// Creating a Promise
+const fetchData = new Promise((resolve, reject) => {
+  console.log('Promise is running...');
+
+  // Simulate async operation (like API call)
+  let success = Math.random() > 0.5;
+
+  setTimeout(() => {
+    if (success) {
+      // Success - call resolve with value
+      resolve('Data fetched successfully!');
+    } else {
+      // Failure - call reject with error
+      reject('Error while fetching data');
+    }
+  }, 2000); // Simulate 2 second delay
+});
+
+// ============================================================
+// HANDLING PROMISES WITH .then() AND .catch()
+// ============================================================
+
+// .then() - handles resolved promise (success case)
+// .catch() - handles rejected promise (error case)
+
+fetchData
+  .then((result) => {
+    // result is the value passed to resolve()
+    console.log('✓ Success:', result);
+  })
+  .catch((error) => {
+    // error is the value passed to reject()
+    console.log('✗ Error:', error);
+  });
+
+// ============================================================
+// PROMISE CHAINING - One .then() leads to another
+// ============================================================
+
+const getUser = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve({ id: 1, name: 'Shakti' });
+  }, 1000);
+});
+
+getUser
+  .then((user) => {
+    console.log('User found:', user.name);
+    return user.id; // Pass to next .then()
+  })
+  .then((userId) => {
+    console.log('User ID:', userId);
+    return 'Processing user...';
+  })
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((error) => {
+    console.log('Error in chain:', error);
+  });
+
+// ============================================================
+// REAL-WORLD EXAMPLE - Fetch API (Returns Promise)
+// ============================================================
 
 function getUsers() {
+  // fetch() returns a Promise
   fetch('https://jsonplaceholder.typicode.com/users')
-    .then((res) => res.json())
+    .then((response) => {
+      console.log('Response received, converting to JSON...');
+      return response.json(); // Returns another Promise
+    })
     .then((data) => {
-      console.log('Promise Data:', data);
+      console.log('Users data:', data.length, 'users found');
+      console.log('First user:', data[0].name);
     })
     .catch((err) => {
-      console.log('Promise Error:', err);
+      console.log('Error fetching users:', err);
     });
 }
 
-getUsers();
+// Uncomment to run
+// getUsers();
+
+// ============================================================
+// PROMISE UTILITY METHODS
+// ============================================================
+
+// Promise.all() - wait for ALL promises
+const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve) =>
+  setTimeout(() => resolve('success'), 100),
+);
+const promise3 = fetch('https://jsonplaceholder.typicode.com/users').then((r) =>
+  r.json(),
+);
+
+// Promise.all([promise1, promise2, promise3])
+//   .then((results) => {
+//     console.log('All promises resolved:', results);
+//   })
+//   .catch((error) => {
+//     console.log('At least one promise failed:', error);
+//   });
+
+// Promise.race() - return result of first completed promise
+// Promise.race([promise1, promise2])
+//   .then((result) => {
+//     console.log('First promise resolved:', result);
+//   });
+
+// ============================================================
+// KEY POINTS ABOUT PROMISES
+// ============================================================
+
+/*
+1. STATES:
+   - Pending: Operation hasn't completed yet
+   - Fulfilled: Operation completed successfully (resolved)
+   - Rejected: Operation failed (rejected)
+
+2. IMMUTABLE: Once resolved/rejected, state cannot change
+
+3. CHAINING: .then() returns new Promise, allowing chains
+
+4. ERROR HANDLING: .catch() catches errors in chain
+
+5. REAL WORLD USE:
+   - Fetching data from servers
+   - Reading files
+   - Database queries
+   - Any operation that takes time
+*/

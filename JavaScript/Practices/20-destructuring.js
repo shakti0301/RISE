@@ -1,25 +1,34 @@
-// Rest Parameter & Destructuring - extract values from arrays/objects
+// ============================================================
+// DESTRUCTURING - Extract values from arrays/objects
+// ============================================================
 
-// Array Destructuring - extract specific elements from array
+// Destructuring makes code cleaner by unpacking values
+
+// ============================================================
+// ARRAY DESTRUCTURING
+// ============================================================
+
 const arr = [1, 2, 3, 4, 5];
 
-// Extract first element and remaining in 'rest' array
-const [first, ...rest] = arr;
-console.log(first); // Output: 1
-console.log(rest); // Output: [2, 3, 4, 5]
+// Extract specific positions
+const [first, second] = arr;
+console.log('First:', first); // Output: 1
+console.log('Second:', second); // Output: 2
 
-// Extract specific elements
-const [a, b, ...others] = arr;
-console.log(a); // Output: 1
-console.log(b); // Output: 2
-console.log(others); // Output: [3, 4, 5]
+// Extract first and remaining with rest operator (...)
+const [head, ...tail] = arr;
+console.log('Head:', head); // Output: 1
+console.log('Tail:', tail); // Output: [2, 3, 4, 5]
 
-// Skip elements during destructuring
+// Skip elements by leaving gaps
 const [first2, , third] = arr; // Skip second element
-console.log(first2); // Output: 1
-console.log(third); // Output: 3
+console.log('Skipped first2:', first2); // Output: 1
+console.log('Skipped third:', third); // Output: 3
 
-// Object Destructuring - extract properties from object
+// ============================================================
+// OBJECT DESTRUCTURING
+// ============================================================
+
 const person = {
   name: 'Shakti',
   age: 20,
@@ -27,21 +36,44 @@ const person = {
   job: 'Developer',
 };
 
-// Extract specific properties
+// Extract specific properties by name
 const { name, age } = person;
-console.log(name); // Output: 'Shakti'
-console.log(age); // Output: 20
+console.log('Name:', name); // Output: 'Shakti'
+console.log('Age:', age); // Output: 20
 
-// Rename during destructuring
+// Rename properties during extraction
 const { name: personName, age: personAge } = person;
-console.log(personName); // Output: 'Shakti'
+console.log('Person name:', personName); // Output: 'Shakti'
 
-// Extract with rest
-const { name: n, ...remainingData } = person;
-console.log(n); // Output: 'Shakti'
-console.log(remainingData); // { age: 20, city: 'New York', job: 'Developer' }
+// Extract with rest operator
+const { name: n, ...otherData } = person;
+console.log('Name:', n); // Output: 'Shakti'
+console.log('Other:', otherData); // { age, city, job }
 
-// Important: When calculating with destructured values
-const arr2 = [1, 2, 3, 4, 5];
-const [first3, ...rest2] = arr2;
-console.log(first3 + 1); // Output: 2 (1 + 1, not 2 from array)
+// ============================================================
+// PRACTICAL EXAMPLES
+// ============================================================
+
+// Example 1: Function parameters
+function greet({ name, age }) {
+  console.log(`${name} is ${age} years old`);
+}
+greet(person); // Shakti is 20 years old
+
+// Example 2: Swapping values
+let p = 5,
+  q = 10;
+[p, q] = [q, p];
+console.log('Swapped - p:', p, 'q:', q); // 10, 5
+
+// ============================================================
+// KEY BENEFITS
+// ============================================================
+
+/*
+Why use destructuring?
+✓ Less repetitive code
+✓ More readable
+✓ Fewer mistakes
+✓ Clear variable names
+*/
