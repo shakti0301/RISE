@@ -1,15 +1,11 @@
-// ============================================================
 // ARRAY METHODS - map(), filter(), reduce()
-// ============================================================
 
 // These are powerful transformation methods that work with every element
 // They DON'T modify the original array (non-destructive)
 
 const arr = [1, 2, 3, 4, 5];
 
-// ============================================================
 // MAP - TRANSFORM each element using a function
-// ============================================================
 
 // Used when: you want to modify/transform each element
 // Returns: NEW array with transformed elements
@@ -42,9 +38,7 @@ const users = [
 const userNames = users.map((user) => user.name);
 console.log('User names:', userNames); // ['Alice', 'Bob', 'Charlie']
 
-// ============================================================
 // FILTER - KEEP only elements where condition is true
-// ============================================================
 
 // Used when: you want to select certain elements based on condition
 // Returns: NEW array containing only matching elements
@@ -69,9 +63,7 @@ const adults = users.filter((user) => user.age >= 30);
 console.log('Adults (age >= 30):', adults);
 // Output: [{ name: 'Bob', age: 30 }, { name: 'Charlie', age: 35 }]
 
-// ============================================================
 // REDUCE - COMBINE all elements into SINGLE value
-// ============================================================
 
 // Used when: you want to calculate sum, product, or aggregate value
 // Returns: Single value (any type)
@@ -108,9 +100,7 @@ const count = items.reduce((acc, item) => {
 console.log('Item count:', count);
 // Output: { apple: 3, banana: 2, orange: 1 }
 
-// ============================================================
 // CHAINING - Combine multiple methods together
-// ============================================================
 
 console.log('\n--- CHAINING EXAMPLES ---');
 
@@ -134,9 +124,7 @@ const result2 = arr
   .reduce((sum, num) => sum + num, 0); // 24
 console.log('Complex chain result:', result2); // 24
 
-// ============================================================
 // KEY DIFFERENCES TABLE
-// ============================================================
 
 /*
 ┌─────────┬──────────────────────┬──────────────┬──────────────┐

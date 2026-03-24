@@ -1,6 +1,4 @@
-// ============================================================
 // ARRAYS - Collection of elements in a single variable
-// ============================================================
 
 // Arrays store multiple values in order
 // Each element has an INDEX (position)
@@ -12,9 +10,7 @@ const persons = ['Suresh', 'Mahesh', 'Jayesh', 'Ramesh', 20];
 // Index:  0        1         2        3        4
 // Value: 'Suresh' 'Mahesh' 'Jayesh' 'Ramesh'  20
 
-// ============================================================
 // ACCESSING ARRAY ELEMENTS
-// ============================================================
 
 console.log('--- ACCESSING ELEMENTS ---');
 
@@ -32,9 +28,7 @@ console.log(persons[10]); // undefined (doesn't exist)
 // Last element (useful trick)
 console.log(persons[persons.length - 1]); // 20 (last element)
 
-// ============================================================
 // ARRAY LENGTH PROPERTY
-// ============================================================
 
 console.log('--- LENGTH PROPERTY ---');
 
@@ -47,9 +41,7 @@ console.log('After length = 3:', persons);
 // Reset for next examples
 const arr = ['Suresh', 'Mahesh', 'Jayesh', 'Ramesh', 20];
 
-// ============================================================
 // ADDING ELEMENTS - PUSH, UNSHIFT
-// ============================================================
 
 console.log('--- ADDING ELEMENTS ---');
 
@@ -65,9 +57,7 @@ console.log('After push:', fruits); // [..., 'orange', 'mango', 'grape']
 fruits.unshift('strawberry'); // Adds to beginning
 console.log('After unshift:', fruits); // ['strawberry', ...]
 
-// ============================================================
 // REMOVING ELEMENTS - POP, SHIFT, SPLICE
-// ============================================================
 
 console.log('--- REMOVING ELEMENTS ---');
 
@@ -93,9 +83,7 @@ const arr2 = [1, 2, 3, 4, 5];
 arr2.splice(2, 1, 'inserted'); // At index 2: delete 1, insert 'inserted'
 console.log('After splice(2, 1, "inserted"):', arr2);
 
-// ============================================================
 // ARRAY SUMMARY TABLE
-// ============================================================
 
 /*
 ┌──────────┬─────────────┬────────────────────┐

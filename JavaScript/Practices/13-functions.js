@@ -1,13 +1,9 @@
-// ============================================================
 // FUNCTIONS - Reusable blocks of code
-// ============================================================
 
 // A function is a reusable block of code that performs a specific task
 // Benefits: Avoid code repetition, organize code, easier to maintain
 
-// ============================================================
 // FUNCTION DECLARATION
-// ============================================================
 
 // Basic function without parameters
 function greetings() {
@@ -21,9 +17,7 @@ greetings(); // Output: Good Morning
 greetings(); // Called again
 greetings(); // Called again
 
-// ============================================================
 // FUNCTIONS WITH PARAMETERS
-// ============================================================
 
 // Parameters are inputs to the function
 // They go in the parentheses ()
@@ -37,9 +31,7 @@ greetings2('Shakti', 'Raolji'); // Output: Hello Shakti Raolji
 greetings2('Kushal', 'Patel'); // Output: Hello Kushal Patel
 greetings2('John', 'Doe'); // Output: Hello John Doe
 
-// ============================================================
 // DEFAULT PARAMETERS - Fallback values
-// ============================================================
 
 // Default parameter is used if no argument is provided
 function greetings3(firstName = 'Guest', lastName = 'User') {
@@ -50,9 +42,7 @@ greetings3('Shakti', 'Raolji'); // Uses provided values
 greetings3('Mahesh'); // lastName uses default 'User'
 greetings3(); // Both use defaults
 
-// ============================================================
 // RETURN STATEMENT - Get a value back from function
-// ============================================================
 
 // A function can RETURN a value that you can use later
 function add(a, b) {
@@ -72,9 +62,7 @@ function printMessage() {
 
 let result = printMessage(); // result = undefined
 
-// ============================================================
 // FUNCTION EXPRESSIONS - Storing function in variable
-// ============================================================
 
 // Instead of function keyword, store in a const/let
 const greet = function () {
@@ -91,9 +79,7 @@ function executeFunction(fn) {
 
 executeFunction(greet); // Output: Hello World
 
-// ============================================================
 // DIFFERENCE: Function vs Function Expression
-// ============================================================
 
 // Function declaration - hoisted (can call before defining)
 sayHi(); // Works! Hoisting
@@ -111,9 +97,7 @@ const callMeLater = function () {
 
 callMeLater(); // Now it works
 
-// ============================================================
 // PRACTICAL EXAMPLES - Real-world function usage
-// ============================================================
 
 // Example 1: Calculate discount price
 function calculateDiscountedPrice(originalPrice, discountPercent) {
@@ -138,9 +122,7 @@ function isEligibleToVote(age) {
 console.log(isEligibleToVote(20)); // Output: true
 console.log(isEligibleToVote(15)); // Output: false
 
-// ============================================================
 // KEY CONCEPTS SUMMARY
-// ============================================================
 
 /*
 1. FUNCTION - Named block of reusable code

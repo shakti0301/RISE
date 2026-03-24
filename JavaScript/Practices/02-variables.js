@@ -1,6 +1,4 @@
-// ============================================================
 // VARIABLES - Storing and using data
-// ============================================================
 
 // Variables are containers that hold data values
 // Declaring with LET - modern way (recommended)
@@ -10,9 +8,7 @@ let lastname1 = 'sharma';
 // const - variable CANNOT be changed (prevent accidents)
 const country = 'India';
 
-// ============================================================
 // CONCATENATION - Joining strings
-// ============================================================
 
 // Method 1: Using + operator
 console.log(firstname1 + ' ' + lastname1); // Using + to join strings
@@ -23,9 +19,7 @@ console.log(firstname1, lastname1); // Prints with space between
 // Method 3: Template literal (BEST)
 console.log(`Hello ${firstname1} ${lastname1}`);
 
-// ============================================================
 // NAMING CONVENTION (Best Practices)
-// ============================================================
 
 // ✅ Good: camelCase - descriptive names
 let studentName = 'John';

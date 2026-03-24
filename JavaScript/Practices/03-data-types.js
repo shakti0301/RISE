@@ -1,6 +1,4 @@
-// ============================================================
 // PRIMITIVE DATA TYPES
-// ============================================================
 
 // 1. STRING - Text data
 let firstname2 = 'ramesh';
@@ -22,9 +20,7 @@ console.log(undefinedVariable); // Output: undefined
 // 5. NULL - Intentional no value
 let nothing = null;
 
-// ============================================================
 // ARITHMETIC CALCULATIONS
-// ============================================================
 
 let agesuresh = 2026 - 1990; // 36
 let agesurewh = 1990 - 2026; // -36
@@ -34,9 +30,7 @@ console.log('Age Suresh:', agesuresh);
 console.log('Age Surewh:', agesurewh);
 console.log('Age Ramesh:', ageramesh);
 
-// ============================================================
 // TYPEOF OPERATOR - Check data type of any value
-// ============================================================
 
 console.log(typeof 42); // number
 console.log(typeof 'hello'); // string

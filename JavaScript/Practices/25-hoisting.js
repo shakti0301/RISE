@@ -1,9 +1,7 @@
 // HOISTING - JavaScript's behavior of moving declarations to the top
 // Hoisting allows you to use variables and functions before they are declared
 
-// ============================================================
 // FUNCTION HOISTING
-// ============================================================
 
 // Function declarations are FULLY hoisted (definition + name)
 // You can call a function BEFORE it's declared in the code
@@ -17,9 +15,7 @@ function sayHello() {
 // function sayHello() { ... } <- moved here
 // sayHello();
 
-// ============================================================
 // VARIABLE HOISTING - VAR, LET, CONST (Different behavior!)
-// ============================================================
 
 // 1. VAR - Hoisted and initialized with 'undefined'
 console.log(x); // Output: undefined (NOT error!)
@@ -62,9 +58,7 @@ try {
 const z = 15;
 console.log(z); // Output: 15
 
-// ============================================================
 // FUNCTION EXPRESSIONS - NOT fully hoisted
-// ============================================================
 
 // Function expression stored in a variable
 // Only the VARIABLE is hoisted, not the function definition
@@ -95,9 +89,7 @@ const arrowFunc = () => {
   console.log('Arrow function');
 };
 
-// ============================================================
 // PRACTICAL EXAMPLE - Hoisting in Real Scenarios
-// ============================================================
 
 console.log('\n--- Practical Example ---');
 
@@ -113,9 +105,7 @@ function calculateTax(amount) {
   return amount * 0.18;
 }
 
-// ============================================================
 // BEST PRACTICES - Avoid Hoisting Confusion
-// ============================================================
 
 // ✅ GOOD - Declare all functions AND variables at the top
 function add(a, b) {
@@ -134,9 +124,7 @@ console.log(result);
 const myVariable = 'Clear and predictable';
 console.log(myVariable);
 
-// ============================================================
 // SUMMARY TABLE
-// ============================================================
 /*
 ┌─────────────┬──────────┬──────────────┬─────────────────────┐
 │ Type        │ Hoisted? │ Initialized? │ Temporal Dead Zone   │

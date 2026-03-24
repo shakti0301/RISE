@@ -1,12 +1,8 @@
-// ============================================================
 // DESTRUCTURING - Extract values from arrays/objects
-// ============================================================
 
 // Destructuring makes code cleaner by unpacking values
 
-// ============================================================
 // ARRAY DESTRUCTURING
-// ============================================================
 
 const arr = [1, 2, 3, 4, 5];
 
@@ -25,9 +21,7 @@ const [first2, , third] = arr; // Skip second element
 console.log('Skipped first2:', first2); // Output: 1
 console.log('Skipped third:', third); // Output: 3
 
-// ============================================================
 // OBJECT DESTRUCTURING
-// ============================================================
 
 const person = {
   name: 'Shakti',
@@ -50,9 +44,7 @@ const { name: n, ...otherData } = person;
 console.log('Name:', n); // Output: 'Shakti'
 console.log('Other:', otherData); // { age, city, job }
 
-// ============================================================
 // PRACTICAL EXAMPLES
-// ============================================================
 
 // Example 1: Function parameters
 function greet({ name, age }) {
@@ -66,9 +58,7 @@ let p = 5,
 [p, q] = [q, p];
 console.log('Swapped - p:', p, 'q:', q); // 10, 5
 
-// ============================================================
 // KEY BENEFITS
-// ============================================================
 
 /*
 Why use destructuring?

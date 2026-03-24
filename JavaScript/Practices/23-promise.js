@@ -1,13 +1,9 @@
-// ============================================================
 // PROMISES - Handle asynchronous operations
-// ============================================================
 
 // Promise represents an eventual completion/failure of async operation
 // States: Pending → Fulfilled (resolve) or Rejected (reject)
 
-// ============================================================
 // PROMISE BASICS
-// ============================================================
 
 // Creating a Promise
 const fetchData = new Promise((resolve, reject) => {
@@ -27,9 +23,7 @@ const fetchData = new Promise((resolve, reject) => {
   }, 2000); // Simulate 2 second delay
 });
 
-// ============================================================
 // HANDLING PROMISES WITH .then() AND .catch()
-// ============================================================
 
 // .then() - handles resolved promise (success case)
 // .catch() - handles rejected promise (error case)
@@ -44,9 +38,7 @@ fetchData
     console.log('✗ Error:', error);
   });
 
-// ============================================================
 // PROMISE CHAINING - One .then() leads to another
-// ============================================================
 
 const getUser = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -70,9 +62,7 @@ getUser
     console.log('Error in chain:', error);
   });
 
-// ============================================================
 // REAL-WORLD EXAMPLE - Fetch API (Returns Promise)
-// ============================================================
 
 function getUsers() {
   // fetch() returns a Promise
@@ -93,9 +83,7 @@ function getUsers() {
 // Uncomment to run
 // getUsers();
 
-// ============================================================
 // PROMISE UTILITY METHODS
-// ============================================================
 
 // Promise.all() - wait for ALL promises
 const promise1 = Promise.resolve(3);
@@ -120,9 +108,7 @@ const promise3 = fetch('https://jsonplaceholder.typicode.com/users').then((r) =>
 //     console.log('First promise resolved:', result);
 //   });
 
-// ============================================================
 // KEY POINTS ABOUT PROMISES
-// ============================================================
 
 /*
 1. STATES:

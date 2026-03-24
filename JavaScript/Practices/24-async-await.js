@@ -1,13 +1,9 @@
-// ============================================================
 // ASYNC/AWAIT - Modern way to handle asynchronous operations
-// ============================================================
 
 // Async/Await is syntactic sugar over Promises
 // Makes async code look like synchronous code (easier to read)
 
-// ============================================================
 // ASYNC FUNCTION - Always returns a Promise
-// ============================================================
 
 // async keyword makes a function return a Promise automatically
 async function greetAsync() {
@@ -19,9 +15,7 @@ greetAsync().then((message) => {
   console.log(message); // Output: Hello from async function!
 });
 
-// ============================================================
 // AWAIT KEYWORD - Wait for Promise to resolve
-// ============================================================
 
 // await causes JavaScript to STOP and wait for Promise
 // Can only use await inside async function
@@ -47,9 +41,7 @@ async function demonstrateAwait() {
 // Call the function
 // demonstrateAwait();
 
-// ============================================================
 // COMPARISON: Promise vs Async/Await
-// ============================================================
 
 // Using Promise
 function fetchDataWithPromise() {
@@ -78,9 +70,7 @@ async function fetchDataWithAsync() {
 
 // The async/await version is more readable!
 
-// ============================================================
 // ERROR HANDLING - try/catch blocks
-// ============================================================
 
 async function fetchUserWithErrorHandling() {
   try {
@@ -112,9 +102,7 @@ async function fetchUserWithErrorHandling() {
 // Call the function
 // fetchUserWithErrorHandling();
 
-// ============================================================
 // PRACTICAL EXAMPLE - Multiple async operations
-// ============================================================
 
 async function processUserData() {
   try {
@@ -146,9 +134,7 @@ async function processUserData() {
 // Call it
 // processUserData().then(result => console.log('Result:', result));
 
-// ============================================================
 // PARALLEL ASYNC OPERATIONS - Run multiple at once
-// ============================================================
 
 async function fetchMultipleUsers() {
   try {
@@ -176,9 +162,7 @@ async function fetchMultipleUsers() {
 // Call it
 // fetchMultipleUsers();
 
-// ============================================================
 // REAL-WORLD EXAMPLE - Fetch API (Returns Promise)
-// ============================================================
 
 async function getUsers() {
   try {
@@ -198,9 +182,7 @@ async function getUsers() {
 // Uncomment to run actual fetch
 // getUsers();
 
-// ============================================================
 // KEY DIFFERENCES FROM PROMISES
-// ============================================================
 
 /*
 PROMISES:
@@ -220,9 +202,7 @@ BOTH:
 - Can be used together
 */
 
-// ============================================================
 // COMMON MISTAKES & BEST PRACTICES
-// ============================================================
 
 // ❌ Wrong - Not awaiting
 // async function wrongWay() {

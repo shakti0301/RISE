@@ -1,10 +1,6 @@
-// ============================================================
 // OPERATORS - Performing operations on values
-// ============================================================
 
-// ============================================================
 // ARITHMETIC OPERATORS
-// ============================================================
 
 console.log('--- ARITHMETIC OPERATORS ---');
 
@@ -37,9 +33,7 @@ console.log('Age * 2:', agesuresh * 2); // multiply
 console.log('Age / 2:', agesuresh / 2); // divide
 console.log('Age ** 2:', agesuresh ** 2); // power
 
-// ============================================================
 // ASSIGNMENT OPERATORS
-// ============================================================
 
 console.log('\n--- ASSIGNMENT OPERATORS ---');
 
@@ -62,9 +56,7 @@ console.log('After x *= 2:', x); // 24
 x /= 4; // Same as: x = x / 4
 console.log('After x /= 4:', x); // 6
 
-// ============================================================
 // INCREMENT & DECREMENT
-// ============================================================
 
 console.log('\n--- INCREMENT & DECREMENT ---');
 
@@ -86,9 +78,7 @@ console.log('After num++:', num); // Now 6
 let num2 = 5;
 console.log('++num2:', ++num2); // Increments first, then prints 6
 
-// ============================================================
 // COMPARISON OPERATORS (return true/false)
-// ============================================================
 
 console.log('\n--- COMPARISON OPERATORS ---');
 
@@ -102,9 +92,7 @@ console.log('20 <= 20:', num2 <= 20); // true (less or equal)
 console.log('10 == 10:', num1 == 10); // true (equal)
 console.log('10 != 20:', num1 != num2); // true (not equal)
 
-// ============================================================
 // OPERATOR PRECEDENCE (Order of operations - BODMAS)
-// ============================================================
 
 console.log('\n--- OPERATOR PRECEDENCE ---');
 

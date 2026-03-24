@@ -1,14 +1,10 @@
-// ============================================================
 // HELLO WORLD - Your First JavaScript Program
-// ============================================================
 
 // console.log() is the most common way to print output
 // "log" means to record/display information in the console
 console.log('Hello, World! This is a simple JavaScript file.');
 
-// ============================================================
 // STORING DATA IN VARIABLES
-// ============================================================
 
 // Variables are containers that store data
 // let - declares a variable that CAN be changed (modern way)
@@ -19,9 +15,7 @@ console.log(firstname); // Output: suresh
 firstname = 'Shakti';
 console.log(firstname); // Output: Shakti
 
-// ============================================================
 // HOW JAVASCRIPT WORKS
-// ============================================================
 
 // 1. JavaScript code runs line by line (top to bottom)
 console.log('Step 1: Starting program');
@@ -35,9 +29,7 @@ console.log('Step 3: Program completed');
 // Semicolons help JavaScript understand where lines end
 // Note: JavaScript can auto-insert semicolons (optional but recommended)
 
-// ============================================================
 // COMMENTS - Text that explains code (not executed)
-// ============================================================
 
 // Single line comment - starts with //
 /*
@@ -46,9 +38,7 @@ console.log('Step 3: Program completed');
   Helpful for documenting code
 */
 
-// ============================================================
 // TRY IT YOURSELF
-// ============================================================
 
 // Try changing the values and running the code
 const myName = 'Your Name Here';
