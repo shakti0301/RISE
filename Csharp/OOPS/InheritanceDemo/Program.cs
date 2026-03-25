@@ -12,20 +12,27 @@ class Vehicle
 // HAS-A class
 class Engine
 {
+    public int power;
+
+    public Engine(int p)
+    {
+        power = p;
+    }
+
     public void EngineStart()
     {
-        Console.WriteLine("Engine is running");
+        Console.WriteLine("Engine is running with power: " + power);
     }
 }
 
 // Child class (Inheritance + Composition)
-class Car : Vehicle   // IS-A relationship
+class Car : Vehicle   // IS-A
 {
-    private Engine engine = new Engine();  // HAS-A relationship
+    public Engine engine;  // reference only 
 
     public void Drive()
     {
-        engine.EngineStart();  // using Engine
+        engine.EngineStart();  
         Console.WriteLine("Car is driving");
     }
 }
@@ -36,7 +43,10 @@ class Program
     {
         Car c = new Car();
 
-        c.Start();   // inherited (IS-A)
-        c.Drive();   // own + HAS-A
+        // manually initializing Engine (like s.objA = new A(10))
+        c.engine = new Engine(150);
+
+        c.Start();   // inherited
+        c.Drive();   // uses Engine
     }
 }
