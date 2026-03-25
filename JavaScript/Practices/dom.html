@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Counter Number</h1>
+    <p id="value"></p>
+    <button onclick="handleCounterPlus()">+</button>
+    <button onclick="handleCounterMinuse()">-</button>
+
+    <script>
+      let count = 0;
+      let outputElement = document.getElementById('value');
+
+      function updateDisplay() {
+        outputElement.innerHTML = count;
+      }
+
+      function handleCounterPlus() {
+        count++;
+        updateDisplay();
+        console.log(count);
+      }
+
+      function handleCounterMinuse() {
+        count--;
+        updateDisplay();
+        console.log(count);
+      }
+
+      // Initialize display
+      updateDisplay();
+    </script>
+  </body>
+</html>
