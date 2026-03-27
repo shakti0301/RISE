@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="text">Hello</h1>
+    <input type="text" id="input" placeholder="Enter your name" />
+
+    <button id="changeText">Change Text</button>
+    <button id="changeColour">Change Colour</button>
+
+    <p id="output"></p>
+
+    <script>
+      const title = document.getElementById('text');
+      const input = document.getElementById('input');
+      const output = document.getElementById('output');
+
+      const changeTextBtn = document.getElementById('changeText');
+      const changeColourBtn = document.getElementById('changeColour');
+
+      changeTextBtn.addEventListener('click', function () {
+        title.innerText = input.value;
+        output.innerText = 'Text Updated';
+      });
+      changeColourBtn.addEventListener('click', function () {
+        title.style.color = 'red';
+        output.innerText = 'Colour changed';
+      });
+    </script>
+  </body>
+</html>
