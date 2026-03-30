@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4</title>
+  </head>
+  <body>
+    <h1>1. Employee Salary Processor</h1>
+    <label for="empname">Employee Name</label>
+    <input type="text" placeholder="Enter Employee Name" id="empname" />
+    <label for="empsalary">Your Salary</label>
+    <input type="number" placeholder="Enter Your Salary" id="empsalary" />
+    <br /><br />
+    <button id="processSalary">Process Salary</button>
+
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td id="empNameOutput"></td>
+        <td id="empSalaryOutput"></td>
+        <td id="empLevelOutput"></td>
+      </tr>
+    </table>
+
+    <script>
+      const empName = document.getElementById('empname');
+      const empSalary = document.getElementById('empsalary');
+
+      const empNameOutput = document.getElementById('empNameOutput');
+      const empSalaryOutput = document.getElementById('empSalaryOutput');
+      const empLevelOutput = document.getElementById('empLevelOutput');
+
+      const processSalaryBtn = document.getElementById('processSalary');
+
+      processSalaryBtn.addEventListener('click', function () {
+        const name = empName.value;
+        const salary = empSalary.value;
+
+        empNameOutput.innerText = name;
+        empSalaryOutput.innerText = salary;
+
+        if (empSalary.value > 40000) {
+          empSalaryOutput.style.color = 'green';
+          const increasedSalary = salary * 1.1;
+          empSalaryOutput.innerText = increasedSalary;
+        } else {
+          empSalaryOutput.style.color = 'red';
+        }
+
+        let level = '';
+        if (empSalaryOutput.innerText > 70000) {
+          level = 'Senior';
+        } else {
+          level = 'Mid';
+        }
+        empLevelOutput.innerText = level;
+      });
+    </script>
+  </body>
+</html>
