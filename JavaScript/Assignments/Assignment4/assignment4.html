@@ -27,6 +27,36 @@
       </tr>
     </table>
 
+    <hr />
+
+    <label for="orderid">Order ID</label>
+    <input type="text" id="orderid" />
+
+    <label for="orderamount">Order Amount</label>
+    <input type="number" id="orderamount" />
+
+    <label for="orderquantity">Order Quantity</label>
+    <input type="number" id="orderquantity" />
+
+    <button id="addorder">Add Order</button>
+
+    <table border="1">
+      <tr>
+        <th>Order ID</th>
+        <th>Order Amount</th>
+        <th>Order Quantity</th>
+      </tr>
+      <tr>
+        <td id="OrderIdOut"></td>
+        <td id="OrderAmountOut"></td>
+        <td id="OrderQuantityOut"></td>
+      </tr>
+    </table>
+
+    <p id="totalRevenueOut"></p>
+    <p id="totalQuantityOut"></p>
+
+    <button id="result">Show Results</button>
     <script>
       const empName = document.getElementById('empname');
       const empSalary = document.getElementById('empsalary');
@@ -59,6 +89,34 @@
           level = 'Mid';
         }
         empLevelOutput.innerText = level;
+      });
+    </script>
+    <script>
+      const orderId = document.getElementById('orderid');
+      const orderAmount = document.getElementById('orderamount');
+      const orderQuantity = document.getElementById('orderquantity');
+
+      const addOrderBtn = document.getElementById('addorder');
+      const resultBtn = document.getElementById('result');
+
+      let totalRevenue = 0;
+      let totalQuantity = 0;
+
+      addOrderBtn.addEventListener('click', function () {
+        const id = orderId.value;
+        const amount = orderAmount.value;
+        const quantity = orderQuantity.value;
+        OrderIdOut.innerText = id;
+        OrderAmountOut.innerText = amount;
+        OrderQuantityOut.innerText = quantity;
+
+        totalRevenue += amount * quantity;
+        totalQuantity += quantity;
+      });
+
+      resultBtn.addEventListener('click', function () {
+        totalRevenueOut.innerText = 'Total Revenue: ' + totalRevenue;
+        totalQuantityOut.innerText = 'Total Quantity: ' + totalQuantity;
       });
     </script>
   </body>
