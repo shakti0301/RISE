@@ -1,6 +1,6 @@
 namespace Demo1
 {
-    class A
+    public class A
     {
         public void show()
         {
@@ -15,7 +15,7 @@ namespace Demo1
 
 namespace Demo2
 {
-    class B
+    public class B
     {
         public void display()
         {
@@ -29,7 +29,7 @@ namespace Demo3
 {
     namespace Demo4
     {
-        class C
+        public class C
         {
             public void show3()
             {
