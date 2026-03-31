@@ -1,5 +1,37 @@
+# OS FILES
+.DS_Store
+Thumbs.db
+
+# IDE / EDITOR
+.vscode/
+.idea/
+.vs/
+
+# LOG FILES
+*.log
+
+# ENV FILES
+.env
+
+# NODE / ANGULAR / JS
+node_modules/
+dist/
+build/
+.angular/cache/
+coverage/
+
+# .NET / C#
 bin/
 obj/
-.vscode/
-*.DS_Store
-.vs/
+
+# JAVA
+target/
+*.class
+
+# DATABASE
+*.db
+*.sqlite
+
+# TEMP FILES
+tmp/
+temp/
