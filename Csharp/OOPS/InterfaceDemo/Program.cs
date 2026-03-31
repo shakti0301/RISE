@@ -21,6 +21,12 @@ namespace InterfaceDemo
         //we can add property in interface
         int Age { get; set; }
 
+        //static method
+        static void Show()
+        {
+            Console.WriteLine("Static method in Animal interface");
+        }
+
         //default method
         void info()
         {
@@ -106,6 +112,9 @@ namespace InterfaceDemo
             
             Dog d = new Dog();
             d.isMammel();  //To access isMammel() we need to make an object of Dog or we have to pass Dog as a reference
+
+            //Static method of interface
+            Animal.Show();
 
         }
     }
