@@ -18,7 +18,6 @@ export class AppComponent {
 
   showSome() {
     this.showText = !this.showText;
-    this.off = !this.off;
   }
   title2 = 'Hello World';
 }
