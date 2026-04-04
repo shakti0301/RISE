@@ -5,12 +5,13 @@ namespace FactoryMethodDemo
 {
     interface INotification
     {
-        void send();
+        // Every notification type should know how to send itself.
+        void Send();
     }
     
     class EmailNotification : INotification
     {
-        public void send()
+        public void Send()
         {
             Console.WriteLine("Email Notification sent successfully");
         }
@@ -18,14 +19,14 @@ namespace FactoryMethodDemo
 
     class SmsNotification : INotification
     {
-        public void send()
+        public void Send()
         {
             Console.WriteLine("SMS Notification sent successfully");
         }
     }
     class PhNotification : INotification
     {
-        public void send()
+        public void Send()
         {
             Console.WriteLine("Phone Notification sent");
         }
@@ -33,7 +34,8 @@ namespace FactoryMethodDemo
 
     class NotificationFactory
     {
-        public static INotification CreateNotification(String type)
+        // Factory method: creates the right object based on user choice.
+        public static INotification CreateNotification(string type)
         {
             if(type == "email")
                 return new EmailNotification();
@@ -49,10 +51,11 @@ namespace FactoryMethodDemo
     {
         static void Main()
         {
+            // Client code only asks for a type; factory handles object creation details.
             INotification notification;
 
             notification = NotificationFactory.CreateNotification("sms");
-            notification.send();
+            notification.Send();
         }
     }
 }
