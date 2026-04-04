@@ -5,6 +5,7 @@ namespace DelegateDemo
     public delegate void delmethod();         //singlecast delegate method
     public delegate void delmethod2(int x, int y);    //Multicast delegate method
     public delegate void anonymousDel();          //Anonymous delegate method
+    public delegate void anonymousDel2(int x);          //Perameterise Anonymous delegate method
 
     class myClass
     {
@@ -98,9 +99,18 @@ namespace DelegateDemo
             // Here we are not creating any method for anonymous delegate and directly writing the code in the body of the delegate method
             anonymousDel Display = delegate()
             {
+                //No Class Name 
                 Console.WriteLine("\nAnonymous Delegate method");
             };
             Display();
+
+            //We also able to make parameterise anonymous delegate
+            anonymousDel2 Display2 = delegate(int x)
+            {
+                Console.WriteLine("\nParameterise anonymous delegate method, value of X is : " +x);
+            };
+
+            Display2(12);
         }
     }
 }
