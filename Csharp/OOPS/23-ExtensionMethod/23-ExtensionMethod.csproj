@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\NamespaceDemo1\NamespaceDemo1.csproj" />
+    <ProjectReference Include="..\22-MyLibrary\22-MyLibrary.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
