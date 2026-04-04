@@ -95,6 +95,7 @@ namespace DelegateDemo
             dlm(12, 10);
 
             //Anonymous Delegate
+            // Here we are not creating any method for anonymous delegate and directly writing the code in the body of the delegate method
             anonymousDel Display = delegate()
             {
                 Console.WriteLine("\nAnonymous Delegate method");
