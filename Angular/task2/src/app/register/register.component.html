@@ -1,0 +1,58 @@
+<p>register works!</p>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <label for="username">Username :</label>
+  <input
+    type="text"
+    id="username"
+    name="username"
+    formControlName="username"
+    required
+  />
+
+  <label for="email">Email:</label>
+  <input type="text" id="email" formControlName="email" required />
+  @if (this.registerForm.get("email")?.errors?.["pattern"]) {
+    <div>enter proper email</div>
+  }
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" formControlName="password" required />
+  @if (registerForm.get("password")?.errors?.["required"]) {
+    <div>Password is required</div>
+  }
+  @if (registerForm.get("password")?.errors?.["minlength"]) {
+    <div>Minimum 6 characters required</div>
+  }
+  @if (
+    registerForm.get("password")?.errors?.["maxlength"] &&
+    registerForm.get("password")?.touched
+  ) {
+    <div>Maximum 10 characters allowed</div>
+  }
+
+  <label for="confirmPassword">Confirm Password:</label>
+  <input
+    type="password"
+    id="confirmPassword"
+    formControlName="confirmPassword"
+    required
+  />
+  @if (registerForm.errors?.["mismatch"] && registerForm.touched) {
+    <div>Passwords do not match</div>
+  }
+
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" formControlName="phone" />
+  @if (registerForm.get("phone")?.errors?.["required"]) {
+    <div>Phone Number is required</div>
+  }
+  @if (
+    registerForm.get("phone")?.errors?.["pattern"] &&
+    registerForm.get("phone")?.touched
+  ) {
+    <div>10 Digits</div>
+  }
+
+  <button type="submit">Submit</button>
+</form>

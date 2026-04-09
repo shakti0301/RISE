@@ -1,0 +1,16 @@
+<form #loginform="ngForm">
+  <label for="email">Email : </label>
+  <input type="email" name="email" id="email" [(ngModel)]="email" required />
+  <label for="password">Password : </label>
+  <input
+    type="password"
+    name="password"
+    id="password"
+    [(ngModel)]="password"
+    required
+  />
+
+  <button type="submit" (click)="loginClick()" [disabled]="loginform.invalid">
+    Login
+  </button>
+</form>
