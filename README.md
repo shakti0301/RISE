@@ -51,7 +51,7 @@ It serves as a **structured knowledge base + progress tracker** reflecting my gr
 * [x] Programming Fundamentals Revision
 * [x] UML & Design Understanding
 * [ ] .NET Mini Implementations
-* [ ] Angular Practice Tasks
+* [x] Angular Practice Tasks
 * [ ] Azure Hands-on Labs
 * [ ] Real Project Contribution
 
