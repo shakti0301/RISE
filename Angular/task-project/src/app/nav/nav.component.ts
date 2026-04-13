@@ -10,4 +10,6 @@ export class NavComponent {
   aboutPath = 'about';
   contactPath = 'contact';
   adminPath = 'admin';
+  loginPath = 'login';
+  registerPath = 'register';
 }

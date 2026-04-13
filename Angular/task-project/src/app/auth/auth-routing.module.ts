@@ -28,6 +28,14 @@ const routes: Routes = [
     component: AdminComponent,
   },
   {
+    path: 'login',
+    component: HomeComponent,
+  },
+  {
+    path: 'register',
+    component: HomeComponent,
+  },
+  {
     path: '**',
     redirectTo: 'home',
     pathMatch: 'full',
