@@ -49,6 +49,13 @@ namespace Tuples
 
             //Passing tuple in method 
             MyClass.Display(t3);
+
+
+            //Nested Tuple 
+
+            var nested = Tuple.Create(1, Tuple.Create("Shakti", "India"));
+            Console.WriteLine("\nNested Tuple :");
+            Console.WriteLine(nested.Item2.Item1); // Shakti
         }
     }
 }
