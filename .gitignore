@@ -35,3 +35,6 @@ target/
 # TEMP FILES
 tmp/
 temp/
+
+# CONFIG FILES
+appsettings.json
