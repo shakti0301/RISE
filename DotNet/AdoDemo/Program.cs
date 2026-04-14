@@ -5,6 +5,9 @@ using Microsoft.Extensions.Configuration;
 
 class Program
 {
+
+    //Execute Reader
+    // ExecuteReader is a method of the SqlCommand class used to execute SQL statements (typically SELECT) that return multiple rows from a database. It returns a SqlDataReader object, which provides a high-performance, forward-only, and read-only stream of data. 
     static void Main()
     {
         // 1. Read connection string from appsettings.json
