@@ -1,4 +1,4 @@
-<p>register works!</p>
+<!-- <p>register works!</p>
 
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
   <label for="username">Username :</label>
@@ -55,4 +55,11 @@
   }
 
   <button type="submit">Submit</button>
-</form>
+</form> -->
+<app-contact
+  [name]="name"
+  [contact]="contact"
+  [email]="email"
+  [Obj1]="Obj1"
+  (sendMsg)="gotMsg($event)"
+></app-contact>

@@ -10,15 +10,27 @@ import {
   Validators,
 } from '@angular/forms';
 import { __values } from 'tslib';
+import { ContactComponent } from '../Navbar/contact/contact.component';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, ContactComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
 })
 export class RegisterComponent {
+  name: string = 'Shakti';
+  contact: number = 990002939;
+  city: string = 'anc';
+  company: string = 'Ris';
+  email: string = 'sjdfjsd@gamial.com';
+
+  Obj1 = {
+    name: 'shakti',
+    age: 22,
+  };
+
   registerForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -55,5 +67,9 @@ export class RegisterComponent {
     const confirmPassword = form.get('confirmPassword')?.value;
 
     return password === confirmPassword ? null : { mismatch: true };
+  }
+
+  gotMsg(msg: any) {
+    alert(msg);
   }
 }

@@ -1,0 +1,18 @@
+<div *ngIf="flag == true">
+  <div>
+    <ul>
+      <li *ngFor="let item of users">{{ item | uppercase }}</li>
+
+      <!-- @for (u of users; track u) {
+      <li>{{ u }}</li>
+    } -->
+    </ul>
+  </div>
+</div>
+
+<!-- 
+@if (flag) {
+  <div>XYX</div>
+} -->
+
+<button (click)="showText()">Show</button>
