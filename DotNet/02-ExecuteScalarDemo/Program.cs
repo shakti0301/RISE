@@ -25,7 +25,7 @@ class Program
 
             SqlCommand avgCmd = new SqlCommand("SELECT AVG(AGE) FROM Students", conn);
             int average = (int)avgCmd.ExecuteScalar();
-            Console.WriteLine("Total Students: " + average);
+            Console.WriteLine("Total Students: " + averagexxaa);
 
             conn.Close();
         }
