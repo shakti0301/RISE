@@ -2,7 +2,7 @@
 using System.IO;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using System.Diagnostics.CodeAnalysis;
+
 
 class Program
 {
