@@ -1,65 +1,44 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
-  FormControl,
   FormGroup,
-  PatternValidator,
   ReactiveFormsModule,
   ValidationErrors,
   Validators,
 } from '@angular/forms';
-import { __values } from 'tslib';
 import { ContactComponent } from '../Navbar/contact/contact.component';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule, ContactComponent],
+  imports: [ReactiveFormsModule, ContactComponent, CommonModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
 })
 export class RegisterComponent {
-  name: string = 'Shakti';
-  contact: number = 990002939;
-  city: string = 'anc';
-  company: string = 'Ris';
-  email: string = 'sjdfjsd@gamial.com';
-
-  Obj1 = {
-    name: 'shakti',
-    age: 22,
-  };
-
   registerForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group(
       {
+        username: ['', [Validators.required, Validators.minLength(3)]],
         email: [
           '',
           [
             Validators.required,
-            Validators.pattern(/^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/),
+            Validators.pattern(
+              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+            ),
           ],
         ],
-        password: [
-          '',
-          [
-            Validators.required,
-            Validators.maxLength(10),
-            Validators.minLength(6),
-          ],
-        ],
+        password: ['', [Validators.required, Validators.minLength(8)]],
         confirmPassword: ['', Validators.required],
         phone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
       },
       { validators: this.passwordMatchValidators },
     );
-  }
-
-  onSubmit() {
-    console.log(this.registerForm.value);
   }
 
   passwordMatchValidators(form: AbstractControl): ValidationErrors | null {
@@ -69,7 +48,12 @@ export class RegisterComponent {
     return password === confirmPassword ? null : { mismatch: true };
   }
 
-  gotMsg(msg: any) {
-    alert(msg);
+  onSubmit() {
+    if (this.registerForm.valid) {
+      console.log(this.registerForm.value);
+      alert('Registration successful!');
+    } else {
+      alert('Please fix all validation errors');
+    }
   }
 }

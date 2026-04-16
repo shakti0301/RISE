@@ -1,16 +1,30 @@
 <form #loginform="ngForm">
-  <label for="email">Email : </label>
-  <input type="email" name="email" id="email" [(ngModel)]="email" required />
-  <label for="password">Password : </label>
-  <input
-    type="password"
-    name="password"
-    id="password"
-    [(ngModel)]="password"
-    required
-  />
+  <div>
+    <label for="email">Email : </label>
+    <input type="email" name="email" id="email" [(ngModel)]="email" required />
+    <div *ngIf="email && !isEmailValid()" style="color: red; font-size: 12px">
+      Please enter a valid email address
+    </div>
+  </div>
 
-  <button type="submit" (click)="loginClick()" [disabled]="loginform.invalid">
+  <div>
+    <label for="password">Password : </label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      [(ngModel)]="password"
+      required
+    />
+    <div
+      *ngIf="password && !isPasswordValid()"
+      style="color: red; font-size: 12px"
+    >
+      Password must be at least 8 characters long
+    </div>
+  </div>
+
+  <button type="submit" (click)="loginClick()" [disabled]="!isFormValid()">
     Login
   </button>
 </form>

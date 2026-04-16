@@ -1,1 +1,11 @@
 <p>Welcome to Dashboard</p>
+
+<div>
+  <ul>
+    <li *ngFor="let name of userData">{{ name.name }}</li>
+  </ul>
+</div>
+
+<div>
+  <button (click)="createUser()">Create User</button>
+</div>

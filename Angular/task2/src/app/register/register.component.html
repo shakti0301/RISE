@@ -1,65 +1,104 @@
-<!-- <p>register works!</p>
-
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-  <label for="username">Username :</label>
-  <input
-    type="text"
-    id="username"
-    name="username"
-    formControlName="username"
-    required
-  />
+  <div>
+    <label for="username">Username :</label>
+    <input type="text" id="username" formControlName="username" required />
+    <div
+      *ngIf="
+        registerForm.get('username')?.invalid &&
+        registerForm.get('username')?.touched
+      "
+      style="color: red; font-size: 12px"
+    >
+      <span *ngIf="registerForm.get('username')?.errors?.['required']"
+        >Username is required</span
+      >
+      <span *ngIf="registerForm.get('username')?.errors?.['minlength']"
+        >Username must be at least 3 characters</span
+      >
+    </div>
+  </div>
 
-  <label for="email">Email:</label>
-  <input type="text" id="email" formControlName="email" required />
-  @if (this.registerForm.get("email")?.errors?.["pattern"]) {
-    <div>enter proper email</div>
-  }
+  <div>
+    <label for="email">Email :</label>
+    <input type="email" id="email" formControlName="email" required />
+    <div
+      *ngIf="
+        registerForm.get('email')?.invalid && registerForm.get('email')?.touched
+      "
+      style="color: red; font-size: 12px"
+    >
+      <span *ngIf="registerForm.get('email')?.errors?.['required']"
+        >Email is required</span
+      >
+      <span *ngIf="registerForm.get('email')?.errors?.['pattern']"
+        >Please enter a valid email address</span
+      >
+    </div>
+  </div>
 
-  <label for="password">Password:</label>
-  <input type="password" id="password" formControlName="password" required />
-  @if (registerForm.get("password")?.errors?.["required"]) {
-    <div>Password is required</div>
-  }
-  @if (registerForm.get("password")?.errors?.["minlength"]) {
-    <div>Minimum 6 characters required</div>
-  }
-  @if (
-    registerForm.get("password")?.errors?.["maxlength"] &&
-    registerForm.get("password")?.touched
-  ) {
-    <div>Maximum 10 characters allowed</div>
-  }
+  <div>
+    <label for="password">Password :</label>
+    <input type="password" id="password" formControlName="password" required />
+    <div
+      *ngIf="
+        registerForm.get('password')?.invalid &&
+        registerForm.get('password')?.touched
+      "
+      style="color: red; font-size: 12px"
+    >
+      <span *ngIf="registerForm.get('password')?.errors?.['required']"
+        >Password is required</span
+      >
+      <span *ngIf="registerForm.get('password')?.errors?.['minlength']"
+        >Password must be at least 8 characters</span
+      >
+    </div>
+  </div>
 
-  <label for="confirmPassword">Confirm Password:</label>
-  <input
-    type="password"
-    id="confirmPassword"
-    formControlName="confirmPassword"
-    required
-  />
-  @if (registerForm.errors?.["mismatch"] && registerForm.touched) {
-    <div>Passwords do not match</div>
-  }
+  <div>
+    <label for="confirmPassword">Confirm Password :</label>
+    <input
+      type="password"
+      id="confirmPassword"
+      formControlName="confirmPassword"
+      required
+    />
+    <div
+      *ngIf="
+        registerForm.get('confirmPassword')?.invalid &&
+        registerForm.get('confirmPassword')?.touched
+      "
+      style="color: red; font-size: 12px"
+    >
+      <span *ngIf="registerForm.get('confirmPassword')?.errors?.['required']"
+        >Confirm Password is required</span
+      >
+    </div>
+    <div
+      *ngIf="registerForm.errors?.['mismatch'] && registerForm.touched"
+      style="color: red; font-size: 12px"
+    >
+      Passwords do not match
+    </div>
+  </div>
 
-  <label for="phone">Phone Number</label>
-  <input type="tel" id="phone" formControlName="phone" />
-  @if (registerForm.get("phone")?.errors?.["required"]) {
-    <div>Phone Number is required</div>
-  }
-  @if (
-    registerForm.get("phone")?.errors?.["pattern"] &&
-    registerForm.get("phone")?.touched
-  ) {
-    <div>10 Digits</div>
-  }
+  <div>
+    <label for="phone">Phone Number :</label>
+    <input type="tel" id="phone" formControlName="phone" required />
+    <div
+      *ngIf="
+        registerForm.get('phone')?.invalid && registerForm.get('phone')?.touched
+      "
+      style="color: red; font-size: 12px"
+    >
+      <span *ngIf="registerForm.get('phone')?.errors?.['required']"
+        >Phone Number is required</span
+      >
+      <span *ngIf="registerForm.get('phone')?.errors?.['pattern']"
+        >Phone Number must be 10 digits</span
+      >
+    </div>
+  </div>
 
-  <button type="submit">Submit</button>
-</form> -->
-<app-contact
-  [name]="name"
-  [contact]="contact"
-  [email]="email"
-  [Obj1]="Obj1"
-  (sendMsg)="gotMsg($event)"
-></app-contact>
+  <button type="submit" [disabled]="registerForm.invalid">Submit</button>
+</form>
