@@ -29,9 +29,9 @@ SELECT * FROM Employee;
 
 
 INSERT INTO Employee VALUES 
-(1, 'Shakti', 50000.00),
-(2, 'Shyam', 60000.00),
-(3, 'Kushal', 55000.00);
+('Shakti', 50000.00),
+('Shyam', 60000.00),
+('Kushal', 55000.00);
 
 
 CREATE PROCEDURE sp_InsertEmployee
