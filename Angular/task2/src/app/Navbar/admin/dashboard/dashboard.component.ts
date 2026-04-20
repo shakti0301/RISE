@@ -44,4 +44,35 @@ export class DashboardComponent implements OnInit {
       },
     });
   }
+  updateUser() {
+    this.userService
+      .updateUser(1, {
+        name: 'shakti raolji',
+        email: 'shakti.raolji@example.com',
+      })
+      .subscribe({
+        next: (res) => {
+          console.log('User updated:', res);
+        },
+        error: (err) => {
+          console.error('Error updating user:', err);
+        },
+        complete: () => {
+          console.log('User updated successfully');
+        },
+      });
+  }
+  deleteUser() {
+    this.userService.deleteUser(1).subscribe({
+      next: (res) => {
+        console.log('User deleted:', res);
+      },
+      error: (err) => {
+        console.error('Error deleting user:', err);
+      },
+      complete: () => {
+        console.log('User deleted successfully');
+      },
+    });
+  }
 }

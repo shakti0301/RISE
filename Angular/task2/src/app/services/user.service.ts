@@ -13,4 +13,13 @@ export class UserService {
   createUser(user: any) {
     return this.http.post('https://jsonplaceholder.typicode.com/users', user);
   }
+  updateUser(id: number, user: any) {
+    return this.http.put(
+      `https://jsonplaceholder.typicode.com/users/${id}`,
+      user,
+    );
+  }
+  deleteUser(id: number) {
+    return this.http.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+  }
 }
