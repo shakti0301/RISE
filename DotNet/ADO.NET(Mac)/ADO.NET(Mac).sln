@@ -1,0 +1,69 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DisconnectedArch", "DisconnectedArch", "{57366229-8EFB-E9E2-29F0-5BBC978422D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConnectedArch", "ConnectedArch", "{34C33A2B-44B2-2471-136A-2F551E69689C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-WithStoredProcedure", "DisconnectedArch\01-WithStoredProcedure\01-WithStoredProcedure.csproj", "{BFFB915C-6F52-5F13-08F4-57F931F66AB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-WithoutStoredProcedure", "DisconnectedArch\02-WithoutStoredProcedure\02-WithoutStoredProcedure.csproj", "{2B302BE4-C7DB-33EB-0D99-50859C52CA8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-Parameters", "ConnectedArch\03-Parameters\03-Parameters.csproj", "{881A750C-F625-7A22-F6FF-9EEC8BC1AA75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-ExecuteScalarDemo", "ConnectedArch\02-ExecuteScalarDemo\02-ExecuteScalarDemo.csproj", "{F85CC329-E965-889C-F30E-9243F912CB12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-AdoDemo", "01-AdoDemo", "{7DD7234C-DBE4-9897-DAE8-15EEE00857D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoDemo", "ConnectedArch\01-AdoDemo\AdoDemo.csproj", "{38F66162-A2D7-32BA-6D9D-CF39BD1F8697}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-StoredProcedure", "ConnectedArch\04-StoredProcedure\04-StoredProcedure.csproj", "{0047B054-50AA-53FB-E5DF-0FE5E493EEF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFFB915C-6F52-5F13-08F4-57F931F66AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFFB915C-6F52-5F13-08F4-57F931F66AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFFB915C-6F52-5F13-08F4-57F931F66AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFFB915C-6F52-5F13-08F4-57F931F66AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B302BE4-C7DB-33EB-0D99-50859C52CA8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B302BE4-C7DB-33EB-0D99-50859C52CA8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B302BE4-C7DB-33EB-0D99-50859C52CA8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B302BE4-C7DB-33EB-0D99-50859C52CA8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{881A750C-F625-7A22-F6FF-9EEC8BC1AA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881A750C-F625-7A22-F6FF-9EEC8BC1AA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881A750C-F625-7A22-F6FF-9EEC8BC1AA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881A750C-F625-7A22-F6FF-9EEC8BC1AA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F85CC329-E965-889C-F30E-9243F912CB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85CC329-E965-889C-F30E-9243F912CB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F85CC329-E965-889C-F30E-9243F912CB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F85CC329-E965-889C-F30E-9243F912CB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F66162-A2D7-32BA-6D9D-CF39BD1F8697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F66162-A2D7-32BA-6D9D-CF39BD1F8697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F66162-A2D7-32BA-6D9D-CF39BD1F8697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F66162-A2D7-32BA-6D9D-CF39BD1F8697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0047B054-50AA-53FB-E5DF-0FE5E493EEF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0047B054-50AA-53FB-E5DF-0FE5E493EEF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0047B054-50AA-53FB-E5DF-0FE5E493EEF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0047B054-50AA-53FB-E5DF-0FE5E493EEF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFFB915C-6F52-5F13-08F4-57F931F66AB5} = {57366229-8EFB-E9E2-29F0-5BBC978422D7}
+		{2B302BE4-C7DB-33EB-0D99-50859C52CA8F} = {57366229-8EFB-E9E2-29F0-5BBC978422D7}
+		{881A750C-F625-7A22-F6FF-9EEC8BC1AA75} = {34C33A2B-44B2-2471-136A-2F551E69689C}
+		{F85CC329-E965-889C-F30E-9243F912CB12} = {34C33A2B-44B2-2471-136A-2F551E69689C}
+		{7DD7234C-DBE4-9897-DAE8-15EEE00857D6} = {34C33A2B-44B2-2471-136A-2F551E69689C}
+		{38F66162-A2D7-32BA-6D9D-CF39BD1F8697} = {7DD7234C-DBE4-9897-DAE8-15EEE00857D6}
+		{0047B054-50AA-53FB-E5DF-0FE5E493EEF8} = {34C33A2B-44B2-2471-136A-2F551E69689C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FBD4DC5-222D-483B-B0B9-196DC5BA8809}
+	EndGlobalSection
+EndGlobal
