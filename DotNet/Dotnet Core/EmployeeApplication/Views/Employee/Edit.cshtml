@@ -1,0 +1,10 @@
+@model EmployeeApplication.Models.Employee
+
+<h2>Edit Employee</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    Name: <input asp-for="Name" /><br />
+    Salary: <input asp-for="Salary" /><br />
+    <button type="submit">Update</button>
+</form>
