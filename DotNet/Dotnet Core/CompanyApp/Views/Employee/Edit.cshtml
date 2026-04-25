@@ -1,0 +1,28 @@
+@model CompanyApp.Models.Employee
+
+<h2>Edit Employee</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    Name: <input asp-for="Name" /><br />
+    Salary: <input asp-for="Salary" /><br />
+
+    Department:
+    <select asp-for="DepartmentId">
+        @foreach (var dept in ViewBag.Departments)
+        {
+            if (dept.Id == Model.DepartmentId)
+            {
+                <option value="@dept.Id" selected>@dept.Name</option>
+            }
+            else
+            {
+                <option value="@dept.Id">@dept.Name</option>
+            }
+        }
+    </select>
+
+    <button type="submit">Update</button>
+</form>

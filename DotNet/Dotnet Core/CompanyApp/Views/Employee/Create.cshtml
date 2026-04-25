@@ -1,0 +1,19 @@
+@model CompanyApp.Models.Employee
+
+<h2>Add Employee</h2>
+
+<form method="post">
+
+    Name: <input asp-for="Name" /><br />
+    Salary: <input asp-for="Salary" /><br />
+
+    Department:
+    <select asp-for="DepartmentId">
+        @foreach (var dept in ViewBag.Departments)
+        {
+            <option value="@dept.Id">@dept.Name</option>
+        }
+    </select>
+
+    <button type="submit">Save</button>
+</form>
