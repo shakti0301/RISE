@@ -14,9 +14,11 @@ builder.Services.AddCors(options =>
                         .AllowAnyMethod());
 });
 
-app.UseCors("AllowAngular");
 
 var app = builder.Build();
+
+app.UseCors("AllowAngular");
+app.MapControllers();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
