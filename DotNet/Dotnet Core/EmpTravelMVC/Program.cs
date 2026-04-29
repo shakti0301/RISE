@@ -6,19 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ITravelRepository, TravelRepository>();
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAngular",
-        policy => policy.AllowAnyOrigin()
-                        .AllowAnyHeader()
-                        .AllowAnyMethod());
-});
-
 
 var app = builder.Build();
-
-app.UseCors("AllowAngular");
-app.MapControllers();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -37,7 +26,7 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
+    pattern: "{controller=Travel}/{action=Index}/{id?}")
     .WithStaticAssets();
 
 

@@ -49,7 +49,7 @@ namespace EmpTravelMVC.Repositories
             {
                 SqlCommand cmd = new SqlCommand("spGetRequestsById", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@EmployeeId", id);
+                cmd.Parameters.AddWithValue("@RequestId", id);
 
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -75,7 +75,7 @@ namespace EmpTravelMVC.Repositories
         {
             using(SqlConnection con = new SqlConnection(_connectionString))
             {
-                SqlCommand cmd = new SqlCommand("spAddTravelRequest", con);
+                SqlCommand cmd = new SqlCommand("sp_AddTravelRequest", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@EmployeeId", request.EmployeeId);
                 cmd.Parameters.AddWithValue("@Destination", request.Destination);

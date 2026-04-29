@@ -1,0 +1,25 @@
+@model List<EmpTravelMVC.Models.TravelRequest>
+
+<h2>Travel Requests</h2>
+
+<a href="/Travel/Create">Add New</a>
+
+<table border="1">
+    <tr>
+        <th>Destination</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Destination</td>
+        <td>@item.Status</td>
+        <td>
+            <a href="/Travel/Edit/@item.RequestId">Edit</a> |
+            <a href="/Travel/Delete/@item.RequestId">Delete</a>
+        </td>
+    </tr>
+}
+</table>

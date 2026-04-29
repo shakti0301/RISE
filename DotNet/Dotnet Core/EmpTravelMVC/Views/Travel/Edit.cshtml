@@ -1,0 +1,15 @@
+@model EmpTravelMVC.Models.TravelRequest
+
+<h2>Edit</h2>
+
+<form method="post">
+    <input type="hidden" name="RequestId" value="@Model.RequestId" />
+
+    <input name="EmployeeId" value="@Model.EmployeeId" />
+    <input name="Destination" value="@Model.Destination" />
+    <input type="date" name="StartDate" value="@Model.StartDate.ToString("yyyy-MM-dd")" />
+    <input type="date" name="EndDate" value="@Model.EndDate.ToString("yyyy-MM-dd")" />
+    <input name="Status" value="@Model.Status" />
+
+    <button type="submit">Update</button>
+</form>

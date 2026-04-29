@@ -4,9 +4,7 @@ using EmpTravelMVC.Models;
 
 namespace EmpTravelMVC.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class TravelController : ControllerBase
+    public class TravelController : Controller
     {
         private readonly ITravelRepository _repo;
 
@@ -15,47 +13,56 @@ namespace EmpTravelMVC.Controllers
             _repo = repo;
         }
 
-        // GET: api/travel
-        [HttpGet]
-        public IActionResult GetAll()
+        // 🔹 READ
+        public IActionResult Index()
         {
             var data = _repo.GetAll();
-            return Ok(data);
+            return View(data);
         }
 
-        // GET: api/travel/5
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        // 🔹 CREATE (GET)
+        public IActionResult Create()
         {
-            var request = _repo.GetById(id);
-            if (request == null)
-                return NotFound();
-
-            return Ok(request);
+            return View();
         }
 
-        // POST: api/travel
+        // 🔹 CREATE (POST)
         [HttpPost]
-        public IActionResult Create([FromBody] TravelRequest request)
+        public IActionResult Create(TravelRequest request)
         {
             _repo.Add(request);
-            return Ok();
+            return RedirectToAction("Index");
         }
 
-        // PUT: api/travel
-        [HttpPut]
-        public IActionResult Update([FromBody] TravelRequest request)
+        // 🔹 DETAILS
+        public IActionResult Details(int id)
+        {
+            var request = _repo.GetById(id);
+            if (request == null) return NotFound();
+            return View(request);
+        }
+
+        // 🔹 EDIT (GET)
+        public IActionResult Edit(int id)
+        {
+            var request = _repo.GetById(id);
+            if (request == null) return NotFound();
+            return View(request);
+        }
+
+        // 🔹 EDIT (POST)
+        [HttpPost]
+        public IActionResult Edit(TravelRequest request)
         {
             _repo.Update(request);
-            return Ok();
+            return RedirectToAction("Index");
         }
 
-        // DELETE: api/travel/5
-        [HttpDelete("{id}")]
+        // 🔹 DELETE
         public IActionResult Delete(int id)
         {
             _repo.Delete(id);
-            return Ok();
+            return RedirectToAction("Index");
         }
     }
 }
