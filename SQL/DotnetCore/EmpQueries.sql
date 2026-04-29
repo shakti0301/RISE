@@ -1,26 +1,26 @@
 CREATE DATABASE EmpTravelDB
+USE EmpTravelDB;
+GO
 
-USE EmpTravelDB
+-- 1. GET ALL
+CREATE OR ALTER PROCEDURE spGetAllRequests
+AS
+BEGIN
+    SELECT * FROM TravelRequests
+END
+GO
 
-CREATE TABLE Employees
-(
-    EmployeeId INT PRIMARY KEY IDENTITY,
-    Name VARCHAR(100),
-    Email VARCHAR(100)
-);
+-- 2. GET BY ID (FIXED)
+CREATE OR ALTER PROCEDURE spGetRequestsById
+    @RequestId INT
+AS
+BEGIN
+    SELECT * FROM TravelRequests WHERE RequestId = @RequestId
+END
+GO
 
-CREATE TABLE TravelRequests
-(
-    RequestId INT PRIMARY KEY IDENTITY,
-    EmployeeId INT,
-    Destination VARCHAR(100),
-    StartDate DATE,
-    EndDate DATE,
-    Status VARCHAR(50),
-    FOREIGN KEY (EmployeeId) REFERENCES Employees(EmployeeId)
-) 
-
-CREATE PROCEDURE spAddTravelRequest
+-- 3. ADD
+CREATE OR ALTER PROCEDURE spAddTravelRequest
     @EmployeeId INT,
     @Destination NVARCHAR(100),
     @StartDate DATE,
@@ -31,24 +31,10 @@ BEGIN
     INSERT INTO TravelRequests (EmployeeId, Destination, StartDate, EndDate, Status)
     VALUES (@EmployeeId, @Destination, @StartDate, @EndDate, @Status)
 END
+GO
 
-
-CREATE PROCEDURE spGetAllRequests
-AS
-BEGIN
-    SELECT * FROM TravelRequests
-END
-
-
-CREATE PROCEDURE spGetRequestsById
-    @EmployeeId INT
-AS
-BEGIN
-    SELECT * FROM TravelRequests WHERE EmployeeId = @EmployeeId
-END
-
-
-CREATE PROCEDURE spUpdateRequest
+-- 4. UPDATE
+CREATE OR ALTER PROCEDURE spUpdateRequest
     @RequestId INT,
     @EmployeeId INT,
     @Destination NVARCHAR(100),
@@ -65,11 +51,28 @@ BEGIN
         Status = @Status
     WHERE RequestId = @RequestId
 END
+GO
 
-
-CREATE PROCEDURE spDeleteRequest
+-- 5. DELETE
+CREATE OR ALTER PROCEDURE spDeleteRequest
     @RequestId INT
 AS
 BEGIN
     DELETE FROM TravelRequests WHERE RequestId = @RequestId
 END
+GO
+
+
+
+ALTER PROCEDURE spGetRequestsById
+    @RequestId INT
+AS
+BEGIN
+    SELECT * FROM TravelRequests WHERE RequestId = @RequestId
+END
+GO
+SELECT DB_NAME();
+SELECT name FROM sys.procedures;
+
+INSERT INTO Employees (Name, Email)
+VALUES ('Shakti', 'shakti@email.com');
