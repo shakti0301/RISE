@@ -1,0 +1,19 @@
+@model CRUD_with_EF.Models.Employee
+
+<h2>Create Employee</h2>
+
+<form asp-action="Create">
+    <label>Name</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+
+    <br />
+
+    <label>Email</label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+
+    <br />
+
+    <button type="submit">Save</button>
+</form>

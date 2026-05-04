@@ -1,0 +1,25 @@
+@model IEnumerable<CRUD_with_EF.Models.Employee>
+
+<h2>Employee List</h2>
+
+<a href="/Employee/Create">Create New</a>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.Email</td>
+        <td>
+            <a href="/Employee/Edit/@item.EmployeeId">Edit</a> |
+            <a href="/Employee/Delete/@item.EmployeeId">Delete</a>
+        </td>
+    </tr>
+}
+</table>
