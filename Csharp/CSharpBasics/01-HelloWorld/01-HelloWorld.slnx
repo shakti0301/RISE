@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="../../../DotNet/Dotnet Core/EmployeeApplication/EmployeeApplication.csproj" />
-  <Project Path="01-HelloWorld.csproj" />
-</Solution>
