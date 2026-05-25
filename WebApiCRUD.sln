@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNet", "DotNet", "{71E6E7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dotnet Core", "Dotnet Core", "{288F6DDB-0E86-60B1-DEA6-18D9DA348643}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCRUD", "DotNet\Dotnet Core\WebApiCRUD\WebApiCRUD.csproj", "{28B1406C-D946-43D0-B8AC-F9FCBB7B3BA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCRUD", "DotNet\DotNet Core\WebApiCRUD\WebApiCRUD.csproj", "{28B1406C-D946-43D0-B8AC-F9FCBB7B3BA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
