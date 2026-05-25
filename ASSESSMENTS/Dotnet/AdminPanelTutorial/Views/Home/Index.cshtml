@@ -1,0 +1,24 @@
+﻿@model IEnumerable<AdminPanelTutorial.Models.Doctor>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+
+    <p>Admin Panel</p>
+    <p>All Doctors</p>
+    <table>
+        @foreach (var doctor in Model)
+        {
+            <tr>
+                <td>@doctor.Name</td>
+                <td>@doctor.Email</td>
+                <td>@doctor.Specialty</td>
+                <td><a href="/Home/Update/@doctor.Id">Update</a></td>
+                <td><a href="/Home/@doctor.Id">Delete</a></td>
+            </tr>
+        }
+    </table>
+
+    <a href="/Home/Create">Create Doctor</a>
+</div>
