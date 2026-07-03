@@ -28,6 +28,19 @@ namespace Project2
             Console.WriteLine("Double: " + price);
             Console.WriteLine("String: " + name);
             Console.WriteLine("Auto Variable: " + autoVariable);
+
+
+            /*
+            Data Type Mappings:
+            Int8 = sbyte (signed 8-bit integer)
+            Int16 = short (signed 16-bit integer)
+            Int32 = int (signed 32-bit integer)
+            Int64 = long (signed 64-bit integer)
+            UInt8 = byte (unsigned 8-bit integer)
+            UInt16 = ushort (unsigned 16-bit integer)
+            UInt32 = uint (unsigned 32-bit integer)
+            UInt64 = ulong (unsigned 64-bit integer)
+            */
             
             /*
             Pointers in C# are used in unsafe contexts and allow you to work with memory directly. 
